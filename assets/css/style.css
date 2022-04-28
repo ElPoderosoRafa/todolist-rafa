@@ -1,0 +1,87 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-image: url(../images/maxresdefault.jpg);
+  background-size: cover;
+}
+
+.container {
+  margin: auto;
+  color: white;
+  /* border: solid 1px red; */
+  width: 600px;
+  padding: 40px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.container input {
+  width: 60%;
+  box-sizing: border-box;
+}
+
+.container button {
+  width: 36%;
+  cursor: pointer;
+}
+
+.bs {
+  border-radius: 6px;
+  border-style: none;
+  padding: 8px;
+  font-size: 1.3rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.container h2 {
+  margin-bottom: 20px;
+  font-size: 4rem;
+  font-family: 'Anton', sans-serif;
+}
+
+#listaTarefa {
+  list-style: none;
+  text-align: start;
+  padding: 10px;
+  position: relative;
+}
+
+li {
+  background-color: rgba(177, 107, 64, 0.5);
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#tarefaInput:focus {
+  outline-color: rgba(20, 226, 147, 0.5);
+}
+
+.apagar {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  background-image: url(../images/thresh.png);
+  background-size: cover;
+  padding: 13px;
+  box-sizing: border-box;
+}
+
+.marcar {
+  cursor: pointer;
+  position: absolute;
+  right: 47px;
+  background-image: url(../images/check.png);
+  background-size: cover;
+  padding: 13px;
+  box-sizing: border-box;
+}
+
+.concluir {
+  text-decoration: line-through;
+  text-decoration-color: crimson;
+}
