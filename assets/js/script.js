@@ -14,7 +14,12 @@ function adicionarTarefa(nomeTarefa) {
 function deletarTarefa(index) {
    // .splice(index, qtd(op));
    tarefas.splice(index);
+
    inserirNoBanco();
+
+    const li = document.querySelectorAll('li'); 
+   // for()
+
 }
 
 // Metodo para inserir a tarefa no array local, e em seguida enviar pro local storage
@@ -35,13 +40,21 @@ tarefaButton.addEventListener('click', () => {
 
 document.addEventListener('click', function (e) {
   const el = e.target;
+  const lis = document.querySelectorAll('li');
+  const arr = [...lis];
+  let index = 0;
 
   if (el.classList.contains('apagar')) {
+    console.log(arr);
     let resposta = confirm('Deseja realmente apagar a tarefa?');
     if (resposta) {
-      el.parentElement.parentElement.remove();
 
-    }
+      index = arr.findIndex(e => e.innerText == el.parentElement.parentElement.innerText );
+      tarefas.splice(index,1);
+      el.parentElement.parentElement.remove();
+      localStorage.setItem('tarefas', JSON.stringify(tarefas)); // esta sobrepondo o array atual toda hora transformado em json
+      }
+
   } else if (el.classList.contains('marcar')) {
     let resposta = confirm('Você deseja realmente marcar a tarefa como concluida?')
     if (resposta) {
@@ -54,6 +67,7 @@ function limparInput() {
   tarefaInput.value = '';
   tarefaInput.focus();
 }
+
 
 function recuperaPrintaTarefa() { // printando na tela
  // const listaDeTarefas = JSON.parse(tarefas); // convertendo essas tarefas para objeto novamente para reutilizar
