@@ -8,12 +8,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
-
-h2{
-background: #ffef5c;
-padding: 12px;
-
+  background-color: #e65c8b;
 }
 
 .container {
@@ -23,7 +18,7 @@ padding: 12px;
   padding: 30px;
   text-align: center; 
   font-size: 1rem;
-  background-color: #f7f7f7;
+  background-color: #394049;
   border-radius: 20px;
 
   /*Metodo antigo de centralização de div, mas optei por usar pra relembrar */
@@ -31,24 +26,9 @@ padding: 12px;
   top: 50%;
   transform: translateY(-50%);
   margin: 0 auto;
+  
 }
-.container2 {
 
-  /* border: solid 1px red; */
-
-   text-align: center; 
-   font-size: 2.5rem;
-   background-color: #ffef5c;
-   padding: 30px;
-   border-radius: 5%;
-   max-width: 32%;
-   font-family: 'Unbounded', cursive;
- 
-   /*Metodo antigo de centralização de div, mas optei por usar pra relembrar */
-   position: relative;  
-   top: 35%;
-   margin: 0 auto;
- }
 .container input {
   width: 60%;
   box-sizing: border-box;
