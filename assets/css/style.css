@@ -11,88 +11,89 @@ html, body {
   background-color: #e65c8b;
 }
 
+.bs{
+  height: 2rem;
+  padding: 4px;
+}
+i{
+  cursor: pointer;
+  padding: 5px;
+}
+
 .container {
 
  /* border: solid 1px red; */
-  width: 32%;
-  padding: 30px;
+  max-width: 30%;
+  min-height: fit-content;
   text-align: center; 
   font-size: 1rem;
   background-color: #394049;
-  border-radius: 20px;
-
-  /*Metodo antigo de centralização de div, mas optei por usar pra relembrar */
-  position: relative;  
+  padding: 15px;
+  border-radius: 5px;
+  margin: 0 auto;
+position: relative;  
   top: 50%;
   transform: translateY(-50%);
-  margin: 0 auto;
+  margin: 0 auto; 
+  box-sizing: border-box;
   
+}
+button{
+  background-color: #394049;
+  border-style: none;
 }
 
 .container input {
   width: 60%;
   box-sizing: border-box;
-}
-
-.container button {
-  width: 36%;
-  cursor: pointer;
-}
-
-.bs {
-  border-radius: 6px;
-  border-style: none;
-  padding: 8px;
-  font-size: 1.3rem;
-  font-family: 'Times New Roman', Times, serif;
+  background-color: #31373e;
+  color: #4e545c;
+  border-color: #32373f;
+  border-radius: 3px;
 }
 
 .container h2 {
   margin-bottom: 20px;
-  font-size: 4rem;
-  font-family: 'Anton', sans-serif;
+  font-size: 2rem;
+  font-family:'Roboto', sans-serif;
+  color: white;
 }
 
 #listaTarefa {
   list-style: none;
   text-align: start;
-  padding: 10px;
-  position: relative;
+  margin: 30px 20px;
 }
 
 li {
-  background-color: rgba(177, 107, 64, 0.5);
-  margin-bottom: 5px;
-  border-radius: 5px;
-  padding: 10px;
+  margin-bottom: 10px;
   font-family: 'Times New Roman', Times, serif;
-}
-
-#tarefaInput:focus {
-  outline-color: rgba(20, 226, 147, 0.5);
+  color: #f0f5fa;
 }
 
 .apagar {
   cursor: pointer;
-  position: absolute;
-  right: 15px;
   background-image: url(../images/thresh.png);
-  background-size: cover;
-  padding: 13px;
-  box-sizing: border-box;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 14px;
 }
 
 .marcar {
   cursor: pointer;
-  position: absolute;
-  right: 47px;
   background-image: url(../images/check.png);
-  background-size: cover;
-  padding: 13px;
-  box-sizing: border-box;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 16px;
+  margin-right: 10px;
 }
 
 .concluir {
   text-decoration: line-through;
   text-decoration-color: crimson;
+}
+
+.flexzada{
+  display: flex;
+  justify-content: space-between;
 }

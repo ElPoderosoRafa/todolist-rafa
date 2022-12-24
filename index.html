@@ -11,17 +11,21 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Unbounded:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
-    <h2>LISTA DE TAREFAS</h2>
-    <input type="text" id="tarefaInput" class="bs" placeholder="Digite a tarefa que deseja adicionar...">
-    <button type="submit" class="bs" id="tarefaButton"><i class="fa-solid fa-circle-plus"></i></button>
-    <ul id="listaTarefa">
-
-    </ul>
+    <div class="fixed">
+      <h2>Lista de Tarefas</h2>
+      <input type="text" id="tarefaInput" class="bs" placeholder="Digite a tarefa que deseja adicionar...">
+      <button type="submit" class="bs" id="tarefaButton"><i class="fa-solid fa-list"></i></button>
+    </div>
+    
+    <div class="centralizar">
+      <ul id="listaTarefa">
+      </ul>
+    </div>
   </div>
   <script src="https://kit.fontawesome.com/a72f1ecd51.js" crossorigin="anonymous"></script>
   <script src="./assets/js/script.js"></script>
