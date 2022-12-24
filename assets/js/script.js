@@ -11,17 +11,6 @@ function adicionarTarefa(nomeTarefa) {
     limparInput();
 }
 
-function deletarTarefa(index) {
-   // .splice(index, qtd(op));
-   tarefas.splice(index);
-
-   inserirNoBanco();
-
-    const li = document.querySelectorAll('li'); 
-   // for()
-
-}
-
 // Metodo para inserir a tarefa no array local, e em seguida enviar pro local storage
 function inserirNoBanco(nomeTarefa) {
    tarefas.push(nomeTarefa); // povoando o array com o nome da tarefa.
@@ -54,7 +43,6 @@ document.addEventListener('click', function (e) {
       el.parentElement.parentElement.remove();
       localStorage.setItem('tarefas', JSON.stringify(tarefas)); // esta sobrepondo o array atual toda hora transformado em json
       }
-
   } else if (el.classList.contains('marcar')) {
     let resposta = confirm('Você deseja realmente marcar a tarefa como concluida?')
     if (resposta) {
@@ -70,17 +58,11 @@ function limparInput() {
 
 
 function recuperaPrintaTarefa() { // printando na tela
- // const listaDeTarefas = JSON.parse(tarefas); // convertendo essas tarefas para objeto novamente para reutilizar
   if(tarefas.length > 0) {
   for (let tarefa of tarefas) { // para cada tarefa, do array listadetarefas, 
     adicionarTarefa(tarefa); // crie uma tarefa na tela
   }
-  // for (let tarefa in listaDeTarefas) {
-  //   adicionarTarefa(listaDeTarefas[tarefa]);
-  // }
 }
-
 }
-
 recuperaPrintaTarefa(); // chamando o metodo de resgate e mostrando na tela.
 
